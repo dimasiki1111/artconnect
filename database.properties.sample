@@ -1,0 +1,96 @@
+# ============================================================================
+# DATABASE CONFIGURATION - ARTCONNECT PROJECT
+# ============================================================================
+# 
+# This is a SAMPLE configuration file for the database connection.
+# 
+# USAGE:
+# 1. Copy this file to: src/main/resources/database.properties
+# 2. Modify the values below with your actual database credentials
+# 3. Add "src/main/resources/database.properties" to your .gitignore
+# 4. Update ConnectionManager to load from this file (see example below)
+# 
+# ADVANTAGES:
+# - Separates configuration from code
+# - Passwords not committed to version control
+# - Easy to change configuration without recompiling
+# - Can have different configs for dev/test/production
+# 
+# ============================================================================
+
+# ============================================================================
+# DATABASE HOST CONFIGURATION
+# ============================================================================
+# Typical values:
+#   localhost     → Database on your local machine (default)
+#   127.0.0.1     → Same as localhost (IP address)
+#   192.168.1.10  → Database on another machine in your network
+#   db.example.com → Remote database (cloud, server)
+# ============================================================================
+db.host=localhost
+
+# ============================================================================
+# DATABASE PORT CONFIGURATION
+# ============================================================================
+# Default MySQL port: 3306
+# Change if your MySQL is configured on a different port
+# ============================================================================
+db.port=3306
+
+# ============================================================================
+# DATABASE NAME
+# ============================================================================
+# This must match the database created in SQL/Art-connect_bdd.sql
+# Default: Art_connect
+# ============================================================================
+db.name=Art_connect
+
+# ============================================================================
+# DATABASE USER (Authentication)
+# ============================================================================
+# Default: root (MySQL default)
+# Or use a dedicated non-root user in production
+# ============================================================================
+db.user=root
+
+# ============================================================================
+# DATABASE PASSWORD (SENSITIVE - NEVER COMMIT THIS FILE)
+# ============================================================================
+# ⚠️  IMPORTANT: Replace with YOUR actual MySQL password
+# This file should be added to .gitignore to prevent password leaks
+# 
+# Default MySQL installation: Usually empty or "password"
+# 
+# Examples:
+#   db.password=                           (empty password)
+#   db.password=YOUR_MYSQL_PASSWORD             (your password)
+#   db.password=my$ecure#Pass123           (complex password)
+# ============================================================================
+db.password=YOUR_MYSQL_PASSWORD
+
+# ============================================================================
+# CONNECTION POOL SETTINGS (Optional - for future use)
+# ============================================================================
+# If you implement connection pooling (HikariCP, C3P0, etc.)
+# ============================================================================
+# db.pool.size=10
+# db.pool.max-idle=5
+# db.pool.connection-timeout=30000
+
+# ============================================================================
+# JDBC OPTIONS (Optional)
+# ============================================================================
+# Additional JDBC URL parameters can be configured here
+# These are appended to the JDBC URL
+# ============================================================================
+db.ssl.enabled=false
+db.timezone=UTC
+db.connection-timeout=30000
+
+# ============================================================================
+# ENVIRONMENT INDICATOR
+# ============================================================================
+# Useful for logging which environment is being used
+# Values: DEVELOPMENT, STAGING, PRODUCTION
+# ============================================================================
+db.environment=DEVELOPMENT

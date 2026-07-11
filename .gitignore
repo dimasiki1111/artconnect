@@ -1,0 +1,25 @@
+# ===== Maven =====
+target/
+*.jar
+*.war
+
+# ===== IDE =====
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# ===== SÉCURITÉ : ne jamais committer les vraies credentials =====
+# SECURITY: never commit real credentials
+src/main/resources/database.properties
+database.properties
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Java =====
+*.class
+hs_err_pid*

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.project.artconnect.ui.GalleryController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    
+    <!-- Search Bar -->
+    <HBox spacing="10.0">
+        <TextField fx:id="searchField" promptText="Chercher une galerie..." HBox.hgrow="ALWAYS" />
+        <Button text="Rechercher" onAction="#handleSearch" />
+        <Button text="Réinitialiser" onAction="#handleReset" />
+    </HBox>
+    
+    <!-- CRUD Buttons -->
+    <HBox spacing="10.0">
+        <Button text="Ajouter une Galerie" onAction="#handleAddGallery" />
+        <Button text="Modifier la Galerie" onAction="#handleEditGallery" />
+        <Button text="Supprimer la Galerie" onAction="#handleDeleteGallery" />
+    </HBox>
+    
+    <!-- Table -->
+    <TableView fx:id="galleryTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Nom" prefWidth="200.0" />
+            <TableColumn fx:id="addressColumn" text="Adresse" prefWidth="250.0" />
+            <TableColumn fx:id="ratingColumn" text="Note" prefWidth="100.0" />
+        </columns>
+    </TableView>
+</VBox>
